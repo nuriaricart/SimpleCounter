@@ -1,5 +1,7 @@
 package edu.upc.eseiaat.pma.simplecounter;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,9 +21,11 @@ public class SimpleCounterActivity extends AppCompatActivity {
 
         Button btn_plus = (Button) findViewById(R.id.btn_plus);
         Button btn_resta = (Button) findViewById(R.id.btn_resta);
+        Button btn_exit = (Button) findViewById(R.id.btn_exit);
         label_num = (TextView) findViewById(R.id.label_num);
         num = 0;
-        label_num.setText("0");
+        number = Integer.toString(num);
+        label_num.setText(number);
 
 
         btn_plus.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +43,24 @@ public class SimpleCounterActivity extends AppCompatActivity {
                 num--;
                 number = Integer.toString(num);
                 label_num.setText(number);
+            }
+        });
+
+        btn_exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(SimpleCounterActivity.this);
+                builder.setTitle(R.string.title);
+                String msg = getResources().getString(R.string.message);
+                builder.setMessage(msg);
+                builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                });
+                builder.setNegativeButton(R.string.no,null);
+                builder.create().show();
             }
         });
     }
