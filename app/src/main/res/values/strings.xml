@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleCounter</string>
+    <string name="btn_exit">Exit</string>
+</resources>
