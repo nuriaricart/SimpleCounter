@@ -8,38 +8,39 @@
 
     <TextView
         android:id="@+id/label_num"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="TextView"
-        android:textSize="50sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:textAlignment="center"
+        android:textSize="150sp" />
 
     <Button
         android:id="@+id/btn_resta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="83dp"
+        android:layout_marginTop="31dp"
         android:text="-"
         android:textSize="50sp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp"
         android:layout_below="@+id/label_num"
-        android:layout_toLeftOf="@+id/btn_plus"
-        android:layout_toStartOf="@+id/btn_plus"
-        android:layout_marginRight="72dp"
-        android:layout_marginEnd="72dp" />
+        android:layout_alignLeft="@+id/label_num"
+        android:layout_alignStart="@+id/label_num" />
 
     <Button
         android:id="@+id/btn_plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/btn_resta"
-        android:layout_marginEnd="62dp"
-        android:layout_marginRight="62dp"
         android:text="+"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        android:layout_alignBaseline="@+id/btn_resta"
+        android:layout_alignBottom="@+id/btn_resta"
+        android:layout_alignRight="@+id/label_num"
+        android:layout_alignEnd="@+id/label_num"
+        android:layout_marginRight="27dp"
+        android:layout_marginEnd="27dp" />
 
     <Button
         android:id="@+id/btn_exit"
@@ -49,6 +50,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/btn_plus"
         android:layout_marginBottom="28dp"
-        android:text="@string/btn_exit" />
+        android:text="@string/btn_exit"
+        android:textSize="25sp" />
 
 </RelativeLayout>
